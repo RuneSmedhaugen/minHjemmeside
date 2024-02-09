@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rune's hjemmeside!</title>
+    <style>
+        div.overskrifter {
+            font-size: 30px;
+            color: red;
+            /* background-color: black; */
+            font-style: italic;
+            border: solid 2px;
+            text-align: center;
+        }
+
+        div.mineGames {
+            font-size: 30px;
+            /* background-color: black; */
+            /* color: white; */
+            align-content: center;
+            border: 2px solid whitesmoke
+        }
+
+        .bowlingListe {
+            font-size: 20px;
+            border: solid 2px whitesmoke;
+            align-content: center;
+            /* background-color: black; */
+            /* color: white; */
+        }
+
+        .kretslaget {
+            margin: 5px;
+
+        }
+
+        .overskriftMaling {
+            font-size: 30px;
+            color: red;
+            font-style: italic;
+            border: solid 2px;
+            text-align: center;
+            /* background: black; */
+        }
+
+        .endreBakgrunn {
+            margin: 5px;
+            position: relative;
+            left: 45%;
+
+        }
+
+        .bakgrunnDiv {
+            background-image: url("img/bilde1.jpg");
+        }
+    </style>
+</head>
+
+<body>
+    <div id="bakgrunnDiv">
+
+        <button id="endreBakgrunn" class="endreBakgrunn">
+            Trykk her for å endre bakgrunn
+        </button>
+        <div id="overskriftGaming" class="overskrifter" onclick="spillListe()">Gaming</div>
+
+        <div id="overskriftBowling" class="overskrifter">
+            <h2>Bowling</h2>
+            <img src="img/giphy.gif">
+            <img src="img/kretslaget.jpg" class="kretslaget">
+        </div>
+
+        <div id="bowlingListe" class="bowlingListe">
+            <li>Startet aktivt bowling som 12åring</li>
+            <li>Spilte 300 (høyeste score på 1 serie) første gang som 15åring</li>
+            <li>Spilte på kretslag</li>
+            <li>Jeg og noen venner startet egen klubb i 2014.</li>
+            <li>satt som nestleder i et år i ny klubb</li>
+            <li>Hadde høyeste snitt i klubben i 2 år på rad</li>
+            <li>Har hatt trenerkurs i bowling (så ja jeg kan lære deg å bli bedre)</li>
+            <li>Spilte NM første gang som 14åring. Har deltatt i 4 NM. Høyeste plassering er nr. 32 </li>
+        </div>
+
+        <div id="overskriftMaling" class="overskriftMaling">
+            <h3>Akryl maling (pouring)</h3>
+            <b><i>Under er noe av hva jeg har laget</i></b>
+        </div>
+
+        <div id="alleMaleBilder" class="alleMaleBilder">
+            <img src="img/allebilder.jpg" class="alleMaleBilder1">
+
+        </div>
+    </div>
+
+    <div id="overskriftDyr" class="overskrifter">Dyr</div>
+    <div id="listeDyr">
+        <li>Oppvokst med katter</li>
+        <li>Har også hatt hund, kanin, chinchilla, ørkenrotte og edderkopp</li>
+        <li>Er fosterhjem for katter</li>
+        <li>"forsket" mye på insekter som barn (prøvde å lære så mye som mulig om insekter)</li>
+        <li>Litt småredd dyr som er større enn meg</li>
+        <li>Fikk foten delvis knust av en hest som sto oppå foten min med brodder og nektet å flytte seg</li>
+
+    </div>
+    <div id="AndreInteresser" class="overskrifter">
+        <h2>Andre interesser:</h2>
+        <li>PC bygging</li>
+        <li>TV/film/serier</li>
+        <li>Musikk</li>
+        <li>Sosiale aktiviterer med venner</li>
+    </div>
+    </div>
+
+</body>
+<script>
+
+    function endreBakgrunn() {
+        let randomNumber = Math.floor(Math.random() * 3)
+        // console.log("her kommer", randomNumber);
+        if (randomNumber == 0) {
+            document.getElementById("bakgrunnDiv").className = "bakgrunnDiv";
+        }
+        else if (randomNumber == 1) {
+            return 'url(img/bilde1.jpg)'
+
+        }
+        else {
+            return ''
+
+        }
+    }
+
+    // document.getElementById(bakgrunnDiv).innerHTML = /*HTML*/`
+    // $endreBakrunn
+    // `
+
+
+    /* function spillListe() {
+         document.getElementById("MineGames").innerHTML +=
+             <div id="mineGames" class="mineGames" >
+                 <li>League of Legends</li>
+                 <li>Assetto Corsa Competitzione</li>
+                 <li>CarX Drift Racing Online</li>
+                 <li>GTA 5</li>
+                 <li>WoW</li>
+                 <li>Space Engineers</li>
+                 <li>Palworld</li>
+             </div>
+     }*/
+
+    // function endreBakgrunn() {
+    // document.getElementById(bakgrunnDiv).style =
+    // element.classlist.toggle("background")
+    // }
+
+    // function endreBakgrunn() {
+    //     document.body.style.background = "black";
+    // }
+
+</script>
+
+</body>
+
+</html>
