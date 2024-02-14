@@ -53,7 +53,7 @@
         }
 
         .bakgrunnDiv {
-            background-image: url("img/bilde1.jpg");
+            background-image: url("./img/dragRune.jpg");
         }
     </style>
 </head>
@@ -61,15 +61,17 @@
 <body>
     <div id="bakgrunnDiv">
 
-        <button id="endreBakgrunn" class="endreBakgrunn">
+        <button onclick="endreBakgrunn()" class="endreBakgrunn">
             Trykk her for å endre bakgrunn
         </button>
-        <div id="overskriftGaming" class="overskrifter" onclick="spillListe()">Gaming</div>
+        <div id="overskriftGaming" class="overskrifter" onclick="spillListe()">
+            Gaming (trykk på meg, men bare èn gang)
+        </div>
 
         <div id="overskriftBowling" class="overskrifter">
             <h2>Bowling</h2>
             <img src="img/giphy.gif">
-            <img src="img/kretslaget.jpg" class="kretslaget">
+            <img src="img/kretslaget.jpg" class="kretslaget"> meg og mitt kretslag
         </div>
 
         <div id="bowlingListe" class="bowlingListe">
@@ -92,7 +94,6 @@
             <img src="img/allebilder.jpg" class="alleMaleBilder1">
 
         </div>
-    </div>
 
     <div id="overskriftDyr" class="overskrifter">Dyr</div>
     <div id="listeDyr">
@@ -117,47 +118,32 @@
 <script>
 
     function endreBakgrunn() {
-        let randomNumber = Math.floor(Math.random() * 3)
-        // console.log("her kommer", randomNumber);
-        if (randomNumber == 0) {
-            document.getElementById("bakgrunnDiv").className = "bakgrunnDiv";
+        let randomNum = Math.floor(Math.random() * 3)
+        console.log(randomNum);
+        if (randomNum == 0) {
+            bakgrunnDiv.style.backgroundImage = "url('img/allebilder.jpg')"
         }
-        else if (randomNumber == 1) {
-            return 'url(img/bilde1.jpg)'
-
+        if (randomNum == 1) {
+            bakgrunnDiv.style.backgroundImage = "url('img/bilde1.jpg')"
         }
-        else {
-            return ''
-
+        else{
+            bakgrunnDiv.style.backgroundImage = "url('img/dragRune.jpg')"
         }
     }
+    function spillListe() { /*HTML*/
+         document.getElementById("overskriftGaming").innerHTML +=`
+         <div id="mineGames" class="mineGames" >
+            <li>League of Legends</li>
+            <li>Assetto Corsa Competitzione</li>
+            <li>CarX Drift Racing Online</li>
+            <li>GTA 5</li>
+            <li>WoW</li>
+            <li>Space Engineers</li>
+            <li>Palworld</li>
+            </div>
+            `
+     }
 
-    // document.getElementById(bakgrunnDiv).innerHTML = /*HTML*/`
-    // $endreBakrunn
-    // `
-
-
-    /* function spillListe() {
-         document.getElementById("MineGames").innerHTML +=
-             <div id="mineGames" class="mineGames" >
-                 <li>League of Legends</li>
-                 <li>Assetto Corsa Competitzione</li>
-                 <li>CarX Drift Racing Online</li>
-                 <li>GTA 5</li>
-                 <li>WoW</li>
-                 <li>Space Engineers</li>
-                 <li>Palworld</li>
-             </div>
-     }*/
-
-    // function endreBakgrunn() {
-    // document.getElementById(bakgrunnDiv).style =
-    // element.classlist.toggle("background")
-    // }
-
-    // function endreBakgrunn() {
-    //     document.body.style.background = "black";
-    // }
 
 </script>
 
